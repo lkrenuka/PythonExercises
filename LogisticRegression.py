@@ -12,7 +12,7 @@ def Sigmoid(z):
 
 def Hypothesis(theta, X):
     z = 0
-    for i in xrange(len(theta)):
+    for i in range(len(theta)):
         z += theta[i]*X[i]
     return Sigmoid(z)
 
@@ -20,7 +20,7 @@ def Cost_Function_Gradient(X,Y,theta,alpha,j):
     sum_errors = 0
     m = len(Y)
     cst = float(alpha)/float(m)
-    for i in xrange(m):
+    for i in range(m):
         xi = X[i]
         xij = xi[j]
         hi = Hypothesis(theta,xi)
@@ -30,7 +30,7 @@ def Cost_Function_Gradient(X,Y,theta,alpha,j):
 def Gradient_Descent(X,Y,theta,alpha):
     new_theta = []
     
-    for j in xrange(len(theta)):
+    for j in range(len(theta)):
         CFGrad = Cost_Function_Gradient(X,Y,theta,alpha,j)
         theta_val = (theta[j] - CFGrad)
         new_theta.append(theta_val)
@@ -40,7 +40,7 @@ def Cost_Function(X,Y,theta):
     sum_errors = 0
     m = len(Y)
     cst = (-1/m)
-    for i in xrange(m):
+    for i in range(m):
         hi = Hypothesis(theta,X[i])
         if Y[i] == 1:
             sum_errors += Y[i] * math.log(hi)
@@ -50,7 +50,7 @@ def Cost_Function(X,Y,theta):
                    
 def Logistic_Regression(X,Y,theta,alpha,it):
     m = len(Y)
-    for x in xrange(it):
+    for x in range(it):
         new_theta = Gradient_Descent(X,Y,theta,alpha)
         theta = new_theta
         if x%100 == 0:
