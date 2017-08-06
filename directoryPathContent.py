@@ -7,7 +7,7 @@ Description: This program takes the name of a directory
     and prints out the paths files within that 
     directory as well as any files contained in 
     contained directories. 
-    This function is similar to os.walk.
+    This program is similar to os.walk.
 """
 def print_directory_content(sPath):
     import os

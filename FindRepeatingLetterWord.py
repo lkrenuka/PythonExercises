@@ -9,7 +9,6 @@ def find_word_repeating_char(str):
     str = str.lower()
     new_str = []
     for word in (str.split()):
-#        print (word)
         c = word[0]
         let=1
         while let < len(word):
