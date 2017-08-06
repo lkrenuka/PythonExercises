@@ -10,7 +10,7 @@ class Celcius:
         self.temperature = temperature
     
     def to_fahrenheit(self):
-        self.temperature = (self.temperature * 1.8) + 37
+        self.temperature = (self.temperature * 1.8) + 32
         return self.temperature
     
     def get_temperature(self):
