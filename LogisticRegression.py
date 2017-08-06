@@ -8,7 +8,7 @@ This code expects the user to give data inputs
 """
 import math
 def Sigmoid(z):
-    return float(1.0/float(1.0 - math.exp(-1.0*z)))
+    return float(1.0/float(1.0 + math.exp(-1.0*z)))
 
 def Hypothesis(theta, X):
     z = 0
